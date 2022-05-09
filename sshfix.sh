@@ -45,7 +45,7 @@ esac
 systemctl mask sshd-keygen@rsa.service
 systemctl mask sshd-keygen@ecdsa.service
 [ -f /usr/lib/systemd/system/sshd-keygen.target ] &&
-sed -i '/sshd-keygen@rsa.service/d;/sshd-keygen@ecdsa.service/d' /usr/lib/systemd/system/sshd-keygen.target
+sed -i '/sshd-keygen@rsa\.service/d;/sshd-keygen@ecdsa\.service/d' /usr/lib/systemd/system/sshd-keygen.target
 [ -f /usr/lib/systemd/system/sshd-keygen.service ] &&
 sed -i '/ssh_host_rsa_key/d;/ssh_host_ecdsa_key/d' /usr/lib/systemd/system/sshd-keygen.service
 systemctl daemon-reload
